@@ -58,6 +58,7 @@ public class C_SCAN {
         // once reached the right end 
         // jump to the beggining. 
         head = 0;
+        seek_count += right.get(right.size()-1);
 
         // Now service the requests again 
         // which are left. 
@@ -77,13 +78,13 @@ public class C_SCAN {
             head = cur_track;
         }
 
-        System.out.println("Total number of seek operations = " + seek_count);
-
-        System.out.println("Seek Sequence is");
-
-        for (int i = 0; i < seek_sequence.size(); i++) {
-            System.out.println(seek_sequence.get(i));
-        }
+//        System.out.println("Total number of seek operations = " + seek_count);
+//
+//        System.out.println("Seek Sequence is");
+//
+//        for (int i = 0; i < seek_sequence.size(); i++) {
+//            System.out.println(seek_sequence.get(i));
+//        }
 
         return seek_count;
     }
@@ -91,11 +92,11 @@ public class C_SCAN {
     // Driver code 
     public static void main(String[] args) {
         // request array
-        int arr[] = { 176, 79, 34, 60, 92, 11, 41, 114 };
-        int head = 50;
+        int arr[] = { 98, 183, 41, 122, 14, 124, 65, 67 };
+        int head = 53;
 
         System.out.println("Initial position of head: " + head);
         C_SCAN cscan = new C_SCAN();
-        cscan.getTotalHeadMovement(arr, head);
+        System.out.println(cscan.getTotalHeadMovement(arr, head));
     }
 }

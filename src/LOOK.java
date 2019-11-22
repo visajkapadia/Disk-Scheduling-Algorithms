@@ -77,13 +77,13 @@ public class LOOK {
             run--;
         }
 
-        System.out.println("Total number of seek operations = " + seek_count);
-
-        System.out.println("Seek Sequence is");
-
-        for (int i = 0; i < seek_sequence.size(); i++) {
-            System.out.println(seek_sequence.get(i));
-        }
+//        System.out.println("Total number of seek operations = " + seek_count);
+//
+//        System.out.println("Seek Sequence is");
+//
+//        for (int i = 0; i < seek_sequence.size(); i++) {
+//            System.out.println(seek_sequence.get(i));
+//        }
         return seek_count;
     }
 

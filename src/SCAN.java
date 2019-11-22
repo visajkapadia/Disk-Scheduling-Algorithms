@@ -80,24 +80,24 @@ public class SCAN {
                         run--;
                 }
 
-                System.out.println("Total number of seek operations = " + seek_count);
-
-                System.out.println("Seek Sequence is");
-
-                for (int i = 0; i < seek_sequence.size(); i++) {
-                        System.out.println(seek_sequence.get(i));
-                }
+//                System.out.println("Total number of seek operations = " + seek_count);
+//
+//                System.out.println("Seek Sequence is");
+//
+//                for (int i = 0; i < seek_sequence.size(); i++) {
+//                        System.out.println(seek_sequence.get(i));
+//                }
 
                 return seek_count;
         }
 
         public static void main(String[] args) {
 
-                int arr[] = { 176, 79, 34, 60, 92, 11, 41, 114 };
-                int head = 50;
+                int arr[] = { 98, 183, 41, 122, 14, 124, 65, 67 };
+                int head = 53;
                 String direction = "left";
                 SCAN scan = new SCAN();
-                scan.getTotalHeadMovement(arr, head, direction);
+                System.out.println(scan.getTotalHeadMovement(arr, head, direction));
 
         }
 
