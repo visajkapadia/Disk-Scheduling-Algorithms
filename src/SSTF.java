@@ -27,10 +27,10 @@ public class SSTF {
         return index;
     }
 
-    public  void shortestSeekTimeFirst(int request[],
+    public  int getTotalHeadMovement(int request[],
                                              int head) {
         if (request.length == 0)
-            return;
+            return 0;
 
         node diff[] = new node[request.length];
 
@@ -58,13 +58,14 @@ public class SSTF {
 
         seek_sequence[seek_sequence.length - 1] = head;
 
-        System.out.println("Total Head Movement : "
-                + seek_count);
-        System.out.println("Seek Time: " + (seekRate * seek_count));
+//        System.out.println("Total Head Movement : "
+//                + seek_count);
+//        System.out.println("Seek Time: " + (seekRate * seek_count));
 //        System.out.println("Seek Sequence is");
 
         // print the sequence 
 //        for (int i = 0; i < seek_sequence.length; i++)
 //            System.out.println(seek_sequence[i]);
+        return seek_count;
     }
 }
